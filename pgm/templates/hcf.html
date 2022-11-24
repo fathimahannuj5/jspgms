@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    FIRST NUMBER<br>
+    <input type="number" name="firstname" id="first"><br><br>
+    LAST NUMBER<br>
+    <input type="number" name="last" id="last"><br><br>
+    <button  onclick="demo()">click</button>
+    <script>
+    function demo(){  
+        var first=document.getElementById("first").value;
+        var last=document.getElementById("last").value; 
+        
+        var hcf=1,min;
+        min=first<last? first:last;
+        for(i=1;i<=min;i++){
+            if(first%i==0 && last%i==0){
+                hcf=i;
+               
+                
+            }
+        }
+        console.log("hcf is" +hcf)
+        
+        return false;
+   
+    }    
+
+    </script>
+    
+</body>
+</html>

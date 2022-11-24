@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <input type="number" name="number" id="number">
+
+   <button  onclick="demo()">click</button>
+   
+<script>
+function demo(){
+    // var num1=parseInt(prompt("enter the lower limit"));
+    // var num2=parseInt(prompt("enter the upper limit"));
+
+    // var a=document.getElementById("one").value;
+    var num=document.getElementById("number").value;
+    var temp=0;
+    var sum=0;
+    
+    // if(a < 2)
+    //     a = 2;
+    
+    for(i=2;i<=num;i++){
+        temp=1;
+        for (j=2;j<=i/2;j++){
+            if(i%j==0) {
+               temp=0;
+               break;
+            }
+        }
+        if(temp==1){
+          sum=sum+i;
+          console.log(i+" ");
+        }
+    }    
+ //   document.write("Total prime number :"+sum)
+    console.log("sum of prime number ="+sum);
+
+}
+</script>
+</body>
+</html>
